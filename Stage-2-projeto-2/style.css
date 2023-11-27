@@ -1,0 +1,203 @@
+/* Configurações gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --base-color-dark-purple: #1F1534;
+  --base-color-bluish-green: #89C5CC;
+  --base-color-bluish-gray: #7D7987;
+  --base-color-teal: #69B99D;
+  --base-color--dark-teal: #51917b;
+}
+
+body {
+  padding: 1rem;
+}
+
+.page {
+  margin-inline: auto;
+  width: 98%;
+}
+
+.page img {
+  width: 100%;
+}
+
+/* Estilização do cabeçalho */
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav img {
+  margin-top: 0.3rem;
+  transition: all 0.5s;
+}
+
+header nav img:hover {
+  transform: scale(1.1);
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+header nav ul li {
+  transition: all 0.5s;
+}
+
+header nav ul li:hover {
+  transform: scale(1.1);
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--base-color-dark-purple);
+}
+
+
+/* Estilização do conteúdo principal */
+
+.main-section {
+  margin: 6rem auto 6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.main-section > img {
+  width: 80%;
+  max-width: 30rem;
+  justify-self: center;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  text-align: center;
+}
+
+.main-text h1 {
+  font-family: 'Mulish', sans-serif;
+  font-size: 4.9rem;
+  font-weight: 400;
+  line-height: 5.6rem;
+}
+
+.main-text h1 strong {
+  color: var(--base-color-bluish-green);
+}
+
+.main-text p {
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  color: var(--base-color-bluish-gray);
+}
+
+.main-text button {
+  width: fit-content;
+  padding: 1.5rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: white;
+
+  border: none;
+  border-radius: 0.4rem;
+  background-color: var(--base-color-teal);
+
+  transition: all 0.5s;
+}
+
+.main-text button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: var(--base-color--dark-teal);
+}
+
+.main-text button img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+
+/* Estilização do rodapé */
+
+footer {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+}
+
+footer p a {
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+  transition: all 0.5s;
+}
+
+footer p a:hover {
+  color: blue;
+}
+
+/* Ajustes Para Telas Maiores Que 1024px */
+
+@media(min-width: 1024px) {
+
+  body {
+    padding: 6.5rem min(10rem, 1rem) 3rem;
+  }
+
+  .page {
+    width: 80%;
+  }
+
+  header nav {
+    flex-direction: row;
+  }
+
+  header nav ul {
+    gap: 5rem;
+  }
+  
+  .main-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+  }
+
+  .main-text {
+    text-align:left;
+    align-items: start;
+  }
+}
+
+/* Ajustes Para Telas Maiores Que 1280px */
+
+@media(min-width: 1280px) {
+  .page {
+    width: 70%;
+  }
+}
